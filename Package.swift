@@ -5,8 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "Clibogg",
-    pkgConfig: "ogg",
-    providers: [
-        .brew(["libogg"])
+    products: [
+        .library(name: "Clibogg", targets: ["Clibogg"]),
+    ],
+    targets: [
+        .systemLibrary(name: "Clibogg", pkgConfig: "ogg", providers: [.brew(["libogg"])]),
     ]
+    
 )
