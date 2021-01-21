@@ -7,6 +7,6 @@ let package = Package(
     name: "Clibogg",
     pkgConfig: "ogg",
     providers: [
-        .brew("libogg")
+        .brew(["libogg"])
     ]
 )
